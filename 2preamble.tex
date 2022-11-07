@@ -10,17 +10,19 @@
 
 \usepackage[margin = 2 cm]{geometry}
 
+%setting font
 \usepackage{mathspec}
 \setmainfont{Arial}
 \setsansfont{Arial}
 \setmonofont{Arial}
 \setmathsfont(Digits,Latin)[Numbers={Lining,Proportional}]{Arial}
 \usepackage{xcolor}
-\definecolor{black_background}{RGB}{63,63,63}
+
 %\nofiles
+
 \setlength{\parindent}{0cm}
 
-%Para corregir el paquete babel
+%setting language.
 \renewcommand{\contentsname}{Contenido}
 \renewcommand{\partname}{Parte}
 \renewcommand{\appendixname}{Apéndice}
@@ -28,5 +30,18 @@
 \renewcommand{\figurename}{Figura}
 \renewcommand{\tablename}{Tabla}
 \renewcommand{\bibname}{Bibliografía}
+
+%header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\lhead[\textcolor{white}{\thepage}]{}
+\rhead[\textcolor{white}{\leftmark}]{\textcolor{white}{\thepage}}
+\let\oldheadrule\headrule% Copy \headrule into \oldheadrule
+\renewcommand{\headrule}{\color{white}\oldheadrule}% Add colour to \headrule
+\renewcommand{\headrulewidth}{0.3mm}
+
+
+\fancyfoot{}
 
 
